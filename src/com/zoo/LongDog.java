@@ -22,8 +22,5 @@ public class LongDog extends Dog{
         System.out.println("long dog name: " + getName());
     }
 
-    @Override
-    public void move() {
-        super.move();
-    }
+
 }

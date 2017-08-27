@@ -1,6 +1,6 @@
 package com.zoo;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Moveable{
 
     public Dog(String name) {
         super(name);
@@ -17,14 +17,22 @@ public class Dog extends Animal {
         System.out.println("I'm dog, my name is:" + getName());
     }
 
+
     @Override
     public void move() {
-        System.out.println("jumping like dog...");
+        System.out.println("I'm dog and I'm moving");
+
     }
 
-    public void jump(){
-        System.out.println("I'm jumping");
+    @Override
+    public void jump() {
+        System.out.println("I'm dog and I'm jumping");
+
     }
 
+    @Override
+    public void crawl() {
+        System.out.println("I'm dog and I'm crawling");
 
+    }
 }

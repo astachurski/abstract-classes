@@ -4,29 +4,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal myAnimal = new Dog("pimpek");
-        myAnimal.sayName();
-        myAnimal.makeNoise();
+        Moveable myDogThatMoves = new Dog("pimpek");
 
-        Animal myAnimal2 = new LongDog("pimpek");
-        myAnimal2.makeNoise();
-        myAnimal2.sayName();
+        myDogThatMoves.crawl();
+        myDogThatMoves.jump();
+        myDogThatMoves.move();
 
-        ((LongDog)myAnimal2).jump();
-        ((Dog)myAnimal2).jump();
+        (new FitnessCenter()).testMoveability(myDogThatMoves);
 
-        Dog ld = new LongDog("bububu");
-        ld.jump();
+        Singable myDogThatSings = new Dog("pimpek");
+        myDogThatSings.singAsong();
 
-        LongDog ld2 = new LongDog("pikus");
-        ld2.jump();
+        Animal myDogThatSings2 = new Dog("pimpek2");
+        myDogThatSings2.singAsong();
 
-
-       // myAnimal2.
-
-
+        Singable somethingThatSings = (Singable)(myDogThatSings2);
+        somethingThatSings.singAsong();
 
 
 
     }
+
 }

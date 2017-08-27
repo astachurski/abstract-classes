@@ -1,6 +1,6 @@
 package com.zoo;
 
-public abstract class Animal {
+public class Animal implements Singable{
 
     private String name;
 
@@ -16,7 +16,13 @@ public abstract class Animal {
         return name;
     }
 
-    public abstract void makeNoise();
+    public void makeNoise() {
 
-    public abstract void move();
+    }
+
+    @Override
+    public void singAsong() {
+        System.out.println("I'm animal - Tra lala la la la la !!!");
+
+    }
 }
